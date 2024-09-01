@@ -1,0 +1,21 @@
+:root {
+
+}
+body {
+  background-image: url('../../../public/banner.jpg');
+  background-repeat: no-repeat;
+}
+
+.router-active {
+  > a {
+    span, i {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.main-user-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
