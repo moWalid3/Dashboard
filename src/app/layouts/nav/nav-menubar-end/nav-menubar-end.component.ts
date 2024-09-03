@@ -10,6 +10,8 @@ import { ButtonModule } from 'primeng/button';
 import { NavMenubarEndUserComponent } from "./nav-menubar-end-user/nav-menubar-end-user.component";
 import { NavMenubarEndThemeComponent } from "./nav-menubar-end-theme/nav-menubar-end-theme.component";
 import { NavMenubarEndChatComponent } from "./nav-menubar-end-chat/nav-menubar-end-chat.component";
+import { NavMenubarEndNotificationsComponent } from "./nav-menubar-end-notifications/nav-menubar-end-notifications.component";
+import { NavMenubarEndSearchComponent } from "./nav-menubar-end-search/nav-menubar-end-search.component";
 
 @Component({
   selector: 'app-nav-menubar-end',
@@ -24,7 +26,9 @@ import { NavMenubarEndChatComponent } from "./nav-menubar-end-chat/nav-menubar-e
     ButtonModule,
     NavMenubarEndUserComponent,
     NavMenubarEndThemeComponent,
-    NavMenubarEndChatComponent
+    NavMenubarEndChatComponent,
+    NavMenubarEndNotificationsComponent,
+    NavMenubarEndSearchComponent
 ],
   templateUrl: './nav-menubar-end.component.html',
   styleUrl: './nav-menubar-end.component.scss',

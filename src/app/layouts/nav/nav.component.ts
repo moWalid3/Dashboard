@@ -1,14 +1,13 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { MenubarModule } from 'primeng/menubar';
+import { RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
+import { MenubarModule } from 'primeng/menubar';
 import { RippleModule } from 'primeng/ripple';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
-import { RouterLink } from '@angular/router';
 import { NavSidebarComponent } from "./nav-sidebar/nav-sidebar.component";
 import { NavMenubarEndComponent } from "./nav-menubar-end/nav-menubar-end.component";
 
-//
 @Component({
   selector: 'app-nav',
   standalone: true,
@@ -103,5 +102,4 @@ export class NavComponent  implements OnInit{
   openSidebar() {
     this.sidebarVisible.set(true);
   }
-
 }
