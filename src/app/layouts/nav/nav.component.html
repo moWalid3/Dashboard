@@ -2,101 +2,34 @@
 <div class="card">
   <p-menubar [model]="items">
     <ng-template pTemplate="start" >
-        <img src="logo.svg" class="logo mr-3 cursor-pointer hidden xl:block" alt="Logo MoDash" routerLink="/">
-        <p-button icon="pi pi-bars" (onClick)="openSidebar()" [rounded]="true" [outlined]="true" class="block xl:hidden"/>
+      <img src="logo.svg" class="logo mr-3 cursor-pointer hidden xl:block" alt="Logo MoDash" routerLink="/">
+      <p-button icon="pi pi-bars" (onClick)="openSidebar()" [rounded]="true" [outlined]="true" class="block xl:hidden"/>
     </ng-template>
     <ng-template pTemplate="item" let-item let-root="root">
-        <a pRipple [routerLink]="item.routerLink" routerLinkActive="menubar-router-active" [routerLinkActiveOptions]="{exact: true}"
-          class="flex align-items-center p-menuitem-link"
-        >
-          <span [class]="item.icon"></span>
-          <span class="ml-2">{{ item.label }}</span>
-          @if (item.items) {
-            <i [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']"></i>
-          }
-        </a>
-      </ng-template>
+      <a pRipple [routerLink]="item.routerLink" routerLinkActive="menubar-router-active" [routerLinkActiveOptions]="{exact: true}"
+        class="flex align-items-center p-menuitem-link"
+      >
+        <span [class]="item.icon"></span>
+        <span class="ml-2">{{ item.label }}</span>
+        @if (item.items) {
+          <i [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']"></i>
+        }
+      </a>
+    </ng-template>
     <ng-template pTemplate="end">
-        <div class="flex align-items-center gap-2">
-            <input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto" />
-            <img src="users/male13.png" class="main-user-img" alt="">
-        </div>
+
+      <app-nav-menubar-end />
+
     </ng-template>
   </p-menubar>
 </div>
 
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 <h1>
   This is a header I hope this is working just hope
 </h1>
 
-<div class="card flex justify-content-center">
-  <p-sidebar #sidebarRef [(visible)]="sidebarVisible">
 
-    <ng-template pTemplate="headless">
-      <div class="flex flex-column h-full">
-        <div class="flex align-items-center justify-content-between px-4 pt-3 flex-shrink-0">
-          <span class="inline-flex align-items-center gap-2">
-            <img src="logo.svg" alt="Logo MoDash" class="cursor-pointer logo" routerLink="/">
-          </span>
-          <span>
-            <p-button type="button" (onClick)="sidebarRef.close($event)" icon="pi pi-times" rounded="true" outlined="true" styleClass="h-2rem w-2rem"></p-button>
-          </span>
-        </div>
-
-        <div class="overflow-y-auto">
-          <ul class="list-none p-3 m-0">
-            @for (item of items.slice(0, 3); track $index) {
-              <li [routerLink]="item.routerLink" routerLinkActive="router-active" (click)="sidebarRef.close($event)" [routerLinkActiveOptions]="{exact: true}">
-                <a pRipple class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
-                  <i [class]="item.icon + ' mr-2'"></i>
-                  <span class="font-medium">{{ item.label }}</span>
-                </a>
-              </li>
-            }
-            @for (item of items.slice(3, items.length); track $index) {
-              <li class="sidebar-subItem">
-                <a
-                  pRipple
-                  pStyleClass="@next"
-                  enterClass="hidden"
-                  enterActiveClass="slidedown"
-                  leaveToClass="hidden"
-                  leaveActiveClass="slideup"
-                  class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple"
-                >
-                  <i [class]="item.icon + ' mr-2'"></i>
-                  <span class="font-medium">{{ item.label }}</span>
-                  <i class="pi pi-chevron-down ml-auto"></i>
-                </a>
-                <ul class="list-none py-0 pl-3 pr-0 m-0 hidden overflow-y-hidden transition-all transition-duration-400 transition-ease-in-out">
-                  @for (subItem of item.items; track $index) {
-                    <li
-                      [routerLink]="subItem.routerLink" routerLinkActive="router-active" [routerLinkActiveOptions]="{exact: true}"
-                      (click)="sidebarRef.close($event)"
-                    >
-                      <a pRipple class="flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
-                        <i [class]="subItem.icon + ' mr-2'"></i>
-                        <span class="font-medium">{{ subItem.label }}</span>
-                      </a>
-                    </li>
-                  }
-                </ul>
-              </li>
-            }
-          </ul>
-        </div>
-
-        <div class="mt-auto">
-          <hr class="mb-3 mx-3 border-top-1 border-none surface-border" />
-          <a pRipple class="m-3 flex align-items-center cursor-pointer p-3 gap-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
-            <img src="users/male13.png" class="main-user-img" alt="">
-            <span class="font-bold">Rami Adam</span>
-          </a>
-        </div>
-      </div>
-    </ng-template>
-  </p-sidebar>
-</div>
-
-
+<app-nav-sidebar [items]="items" [(sidebarVisible)]="sidebarVisible" />

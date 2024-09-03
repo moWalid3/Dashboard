@@ -13,4 +13,8 @@
   .p-menubar-start + .p-menubar-button {
     display: none;
   }
+  .p-overlaypanel > div {
+    padding: 0;
+  }
+
 }

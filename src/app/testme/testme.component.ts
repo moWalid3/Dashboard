@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
 import { ChipModule } from 'primeng/chip';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 @Component({
   selector: 'app-testme',
@@ -21,6 +22,7 @@ import { ChipModule } from 'primeng/chip';
     CommonModule,
     ButtonModule,
     ChipModule,
+    NgScrollbarModule
   ],
   templateUrl: './testme.component.html',
   styleUrl: './testme.component.scss',

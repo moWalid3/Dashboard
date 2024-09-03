@@ -1,0 +1,10 @@
+img {
+  display: block;
+  cursor: pointer;
+}
+::ng-deep {
+  .p-tag {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+}
