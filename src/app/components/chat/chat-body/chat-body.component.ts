@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ChatService } from '../../../core/services/chat/chat.service';
 import { NgClass } from '@angular/common';
 
@@ -7,7 +7,8 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [NgClass],
   templateUrl: './chat-body.component.html',
-  styleUrl: './chat-body.component.scss'
+  styleUrl: './chat-body.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatBodyComponent {
   chatService = inject(ChatService);

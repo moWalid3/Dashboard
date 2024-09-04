@@ -6,4 +6,7 @@ img {
 .text-alert {
   width: fit-content;
   max-width: 25rem;
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
 }

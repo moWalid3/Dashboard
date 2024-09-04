@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { MenubarModule } from 'primeng/menubar';
@@ -19,9 +19,10 @@ import { NavMenubarEndComponent } from "./nav-menubar-end/nav-menubar-end.compon
     NavSidebarComponent,
     ButtonModule,
     NavMenubarEndComponent
-],
+  ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavComponent  implements OnInit{
   items!: MenuItem[];

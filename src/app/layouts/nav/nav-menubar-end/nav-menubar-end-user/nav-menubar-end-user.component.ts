@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 import { RippleModule } from 'primeng/ripple';
@@ -16,6 +16,7 @@ import { TagModule } from 'primeng/tag';
   ],
   templateUrl: './nav-menubar-end-user.component.html',
   styleUrl: './nav-menubar-end-user.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavMenubarEndUserComponent implements OnInit {
   items!: MenuItem[];

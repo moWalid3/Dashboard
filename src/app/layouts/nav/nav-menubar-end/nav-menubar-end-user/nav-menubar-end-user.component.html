@@ -1,11 +1,7 @@
 <p-menu #menu [model]="items" [popup]="true" styleClass="w-full md:w-17rem">
   <ng-template pTemplate="start">
     <span class="inline-flex align-items-center gap-3 p-3">
-      <img
-        src="users/male14.png"
-        class="h-4rem w-4rem border-round shadow-1"
-        alt="User Rami"
-      />
+      <img src="users/male14.png" class="h-4rem w-4rem border-round shadow-1" alt="User Rami" />
       <div>
         <span class="font-medium mr-2">Rami Adam</span>
         <p-tag severity="success" value="Pro" class="p-0" />
@@ -13,22 +9,18 @@
       </div>
     </span>
   </ng-template>
+
   <ng-template pTemplate="item" let-item>
-    <a pRipple class="flex align-items-center p-menuitem-link text-sm">
-      <span class="ml-2">{{ item.label }}</span>
+    <a pRipple class="flex align-items-center p-menuitem-link px-3 text-sm">
+      <span>{{ item.label }}</span>
       <span [class]="item.icon + ' ml-auto'"></span>
       @if (item.id === 'language') {
-      <span class="ml-2">
-        <img src="flags/en.svg" class="h-1rem w-1rem" alt="England Flag" />
-      </span>
+        <span class="ml-2">
+          <img src="flags/en.svg" class="h-1rem w-1rem" alt="England Flag" />
+        </span>
       }
     </a>
   </ng-template>
 </p-menu>
 
-<img
-  src="users/male14.png"
-  class="main-user-img shadow-1"
-  alt="User Rami"
-  (click)="menu.toggle($event)"
-/>
+<img src="users/male14.png" class="main-user-img shadow-1" alt="User Rami" (click)="menu.toggle($event)" />

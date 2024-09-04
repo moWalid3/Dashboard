@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
@@ -10,9 +10,10 @@ import { ThemeService } from '../../../../core/services/theme/theme.service';
   imports: [MenuModule, ButtonModule],
   templateUrl: './nav-menubar-end-theme.component.html',
   styleUrl: './nav-menubar-end-theme.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavMenubarEndThemeComponent {
-  private themeService = inject(ThemeService);
+export class NavMenubarEndThemeComponent implements OnInit {
+  themeService = inject(ThemeService);
   items!: MenuItem[];
 
   ngOnInit() {

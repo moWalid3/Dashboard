@@ -1,4 +1,8 @@
-<div class="card flex justify-content-center">
-  <p-menu #menu [model]="items" [popup]="true" />
-  <p-button (onClick)="menu.toggle($event)" icon="pi pi-sun" size="large" [text]="true"/>
-</div>
+<p-menu #menu [model]="items" [popup]="true" />
+
+<p-button
+  (onClick)="menu.toggle($event)"
+  [icon]="themeService.currentTheme() === 'light' ? 'pi pi-sun' : 'pi pi-moon'"
+  size="large"
+  [text]="true"
+/>

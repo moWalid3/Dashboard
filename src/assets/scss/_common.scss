@@ -2,6 +2,7 @@
   --scrollbar-border-radius: 10px;
   --scrollbar-thumb-color: var(--bluegray-200)
 }
+
 body {
   background-image: url('../../../public/banner.jpg');
   background-repeat: no-repeat;
@@ -35,9 +36,10 @@ body {
   font-size: 13px;
 }
 
-.bg-my-light {
+.bg-light {
   background-color: var(--highlight-bg);
 }
-.bg-my-light-gray {
+
+.bg-light-alt {
   background-color: var(--surface-hover);
 }

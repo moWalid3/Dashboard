@@ -1,9 +1,9 @@
 import { Component, input, model } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { StyleClassModule } from 'primeng/styleclass';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { RippleModule } from 'primeng/ripple';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 

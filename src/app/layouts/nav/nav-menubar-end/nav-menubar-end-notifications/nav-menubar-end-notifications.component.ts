@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MenuModule } from 'primeng/menu';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
@@ -22,7 +22,8 @@ interface Notification {
     BadgeModule
   ],
   templateUrl: './nav-menubar-end-notifications.component.html',
-  styleUrl: './nav-menubar-end-notifications.component.scss'
+  styleUrl: './nav-menubar-end-notifications.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavMenubarEndNotificationsComponent  {
   notifications: Notification[] = [

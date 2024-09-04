@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NavComponent } from "./nav/nav.component";
 import { RouterOutlet } from '@angular/router';
 
@@ -7,7 +7,8 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [NavComponent, RouterOutlet],
   templateUrl: './layouts.component.html',
-  styleUrl: './layouts.component.scss'
+  styleUrl: './layouts.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LayoutsComponent {
 

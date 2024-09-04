@@ -8,15 +8,11 @@ export class ChatService {
   private chat = signal<IMessage[]>([]);
   currentChat = this.chat.asReadonly();
 
-  dummyFriendData: MessageUserData;
-  dummyOwnData: MessageUserData;
+  dummyFriendData!: MessageUserData;
+  dummyOwnData!: MessageUserData;
 
   constructor() {
-    const { dummyChat, dummyFriendData, dummyOwnData } =
-      this.generateDummyData();
-    this.dummyFriendData = dummyFriendData;
-    this.dummyOwnData = dummyOwnData;
-    this.chat.set(dummyChat);
+    this.generateDummyData();
   }
 
   addMessageToChat(message: IMessage) {
@@ -24,61 +20,59 @@ export class ChatService {
 
     setTimeout(() => {
       this.chat.update((oldChat) => [...oldChat, this.getFriendMsg()]);
-    }, 700);
+    }, 1000);
   }
 
   private generateDummyData() {
-    const dummyFriendData: MessageUserData = {
+    this.dummyFriendData = {
       name: 'Dan Wilson',
       imgUrl: 'users/male11.png',
       isOwnMessage: false,
     };
 
-    const dummyOwnData: MessageUserData = {
+    this.dummyOwnData = {
       name: 'You',
       imgUrl: 'users/male14.png',
       isOwnMessage: true,
     };
 
-    const dummyChat: IMessage[] = [
+    this.chat.set([
       {
-        user: dummyFriendData,
+        user: this.dummyFriendData,
         time: '5 Hours',
         msg: 'How likely are you to recommend our company to your friends and family ?',
       },
       {
-        user: dummyOwnData,
+        user: this.dummyOwnData,
         time: '4 Hours',
         msg: `Hey there, we're just writing to let you know that you've been subscribed to a repository on GitHub.`,
       },
       {
-        user: dummyFriendData,
+        user: this.dummyFriendData,
         time: '3 Hours',
         msg: 'Ok, Understood!',
       },
       {
-        user: dummyOwnData,
+        user: this.dummyOwnData,
         time: '2 Hours',
         msg: `You'll receive notifications for all issues, pull requests!`,
       },
       {
-        user: dummyFriendData,
+        user: this.dummyFriendData,
         time: '1 Hours',
         msg: 'You can unwatch this repository immediately by clicking here: Keenthemes.com',
       },
       {
-        user: dummyOwnData,
+        user: this.dummyOwnData,
         time: '5 mins',
         msg: `Most purchased Business courses during this sale!`,
       },
       {
-        user: dummyFriendData,
+        user: this.dummyFriendData,
         time: '2 mins',
         msg: 'Company BBQ to celebrate the last quater achievements and goals. Food and drinks provided',
       },
-    ];
-
-    return { dummyFriendData, dummyOwnData, dummyChat };
+    ]);
   }
 
   private getFriendMsg(): IMessage {
