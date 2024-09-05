@@ -1,12 +1,11 @@
 :root {
   --scrollbar-border-radius: 10px;
-  --scrollbar-thumb-color: var(--bluegray-200)
+  --scrollbar-thumb-color: var(--surface-300)
 }
 
 body {
-  background-image: url('../../../public/banner.jpg');
-  background-repeat: no-repeat;
-  height: 100rem;
+  background-color: var(--surface-ground);
+  margin: 0;
 }
 
 .router-active {
@@ -42,4 +41,20 @@ body {
 
 .bg-light-alt {
   background-color: var(--surface-hover);
+}
+
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 992px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
 }

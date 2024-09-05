@@ -9,6 +9,7 @@ import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
 import { ChipModule } from 'primeng/chip';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @Component({
   selector: 'app-testme',
@@ -22,7 +23,8 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     CommonModule,
     ButtonModule,
     ChipModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    CheckboxModule
   ],
   templateUrl: './testme.component.html',
   styleUrl: './testme.component.scss',
