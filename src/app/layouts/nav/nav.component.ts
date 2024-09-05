@@ -43,7 +43,7 @@ export class NavComponent  implements OnInit{
       {
         label: 'Add New Client',
         icon: 'pi pi-sparkles',
-        routerLink: '/aa'
+        routerLink: '/add-new-client'
       },
       {
         label: 'Chat',
@@ -60,7 +60,7 @@ export class NavComponent  implements OnInit{
             // routerLink: '/'
           },
           {
-            label: 'Drawer Chat',
+            label: 'My Contacts',
             icon: 'pi pi-angle-double-right',
             // routerLink: '/'
           },

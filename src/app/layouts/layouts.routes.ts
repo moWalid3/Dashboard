@@ -10,12 +10,25 @@ export const layoutRoutes: Routes = [
     children: [
       {
         path: '',
-        component: DashboardComponent
+        component: DashboardComponent,
+        data: {
+          title: 'Dashboard'
+        }
+      },
+      {
+        path: 'add-new-client',
+        loadComponent: () =>
+          import('../pages/add-new-client/add-new-client.component').then(
+            (m) => m.AddNewClientComponent
+          ),
+        data: {
+          title: 'Add New Client'
+        }
       },
       {
         path: 'test',
-        component: TestmeComponent
-      }
-    ]
+        component: TestmeComponent,
+      },
+    ],
   },
 ];
