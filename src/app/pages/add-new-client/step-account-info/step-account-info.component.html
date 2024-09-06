@@ -1,4 +1,4 @@
-<p class="choose-account m-0 mb-2 text-xl font-bold">Account Info</p>
+<p class="m-0 mb-2 text-xl font-bold">Account Info</p>
 <p class="text-color-secondary text-13px font-bold mb-6">
   If you need more info, please check out
   <span class="text-primary hover:text-primary-400 transition-duration-100 text-sm cursor-pointer">Help Page</span> .
@@ -18,8 +18,8 @@
 <span class="text-color-secondary text-13px block pb-6">Customers will see this shortened version of your statement descriptor</span>
 
 <label for="teamName" class="block mb-2">Team Account Name <span class="text-red-500">*</span></label>
-<input #inp="ngModel" pInputText id="teamName" required class="w-full" ngModel aria-describedby="team-name-help"  />
-@if (inp.value?.length < 1 && inp.dirty) {
+<input #inp="ngModel" variant="filled" pInputText id="teamName" required class="w-full" ngModel="Test" aria-describedby="team-name-help"  />
+@if (inp.invalid && inp.dirty) {
   <small id="team-name-help" class="text-red-500 block mt-1">Team Account name is required</small>
 }
 
