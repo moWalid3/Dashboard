@@ -1,10 +1,6 @@
 :host {
-  .choose-account {
-    display: flex;
-    align-items: center;
-    gap: .25rem;
-  }
-  .types-parent {
+  
+  .team-size-parent {
     > div {
       cursor: pointer;
       transition: 100ms;

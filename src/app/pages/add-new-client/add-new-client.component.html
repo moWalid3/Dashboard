@@ -1,4 +1,4 @@
-<div class=" px-4 xl:px-8 pt-7 pb-5 surface-section shadow-1 border-round-lg">
+<div class=" px-4 xl:px-8 pt-7 pb-2 surface-section shadow-1 border-round-lg">
 
     <p-stepper [linear]="true" class="md:px-8">
 
@@ -10,15 +10,7 @@
 
         <p-stepperPanel header="Account Info">
             <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
-                <div class="flex flex-column h-12rem">
-                    <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                        Content II
-                    </div>
-                </div>
-                <div class="flex pt-4 justify-content-between">
-                    <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-                    <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" />
-                </div>
+              <app-step-account-info [nextCallback]="nextCallback" [prevCallback]="prevCallback" />
             </ng-template>
         </p-stepperPanel>
 

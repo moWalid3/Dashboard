@@ -10,7 +10,7 @@ import { TooltipModule } from 'primeng/tooltip';
   styleUrl: './step-account-type.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'md:px-8'
+    'class': 'block md:px-8'
   }
 })
 export class StepAccountTypeComponent {

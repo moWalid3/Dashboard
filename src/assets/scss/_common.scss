@@ -1,6 +1,6 @@
 :root {
   --scrollbar-border-radius: 10px;
-  --scrollbar-thumb-color: var(--surface-300)
+  --scrollbar-thumb-color: var(--surface-300);
 }
 
 body {
@@ -10,7 +10,8 @@ body {
 
 .router-active {
   > a {
-    span, i {
+    span,
+    i {
       color: var(--primary-color);
     }
   }
@@ -27,7 +28,7 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  margin-right: .4rem;
+  margin-right: 0.4rem;
   background-color: var(--green-500);
 }
 
@@ -43,7 +44,6 @@ body {
   background-color: var(--surface-hover);
 }
 
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -57,4 +57,15 @@ body {
   @media (min-width: 1400px) {
     max-width: 1320px;
   }
+}
+
+span.tooltip {
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  color: var(--primary-color-text);
+  margin-top: .25rem;
 }
