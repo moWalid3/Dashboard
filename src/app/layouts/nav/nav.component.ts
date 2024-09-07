@@ -52,17 +52,17 @@ export class NavComponent  implements OnInit{
           {
             label: 'Private Chat',
             icon: 'pi pi-angle-double-right',
-            // routerLink: '/'
+            routerLink: '/chat/private-chat'
           },
           {
             label: 'Group Chat',
             icon: 'pi pi-angle-double-right',
-            // routerLink: '/'
+            routerLink: '/chat/group-chat'
           },
           {
             label: 'My Contacts',
             icon: 'pi pi-angle-double-right',
-            // routerLink: '/'
+            routerLink: '/chat/my-contacts'
           },
         ],
       },

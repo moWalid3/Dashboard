@@ -26,6 +26,32 @@ export const layoutRoutes: Routes = [
         }
       },
       {
+        path: 'chat',
+        children: [
+          {
+            path: 'private-chat',
+            loadComponent : () => import('../pages/chats/private-chat/private-chat.component').then(m => m.PrivateChatComponent),
+            data: {
+              title: 'Private Chat'
+            }
+          },
+          {
+            path: 'group-chat',
+            loadComponent : () => import('../pages/chats/group-chat/group-chat.component').then(m => m.GroupChatComponent),
+            data: {
+              title: 'Group Chat'
+            }
+          },
+          {
+            path: 'my-contacts',
+            loadComponent : () => import('../pages/chats/my-contacts-list/my-contacts-list.component').then(m => m.MyContactsListComponent),
+            data: {
+              title: 'My Contacts'
+            }
+          }
+        ]
+      },
+      {
         path: 'test',
         component: TestmeComponent,
       },
