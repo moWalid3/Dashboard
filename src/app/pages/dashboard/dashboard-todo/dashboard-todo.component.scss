@@ -1,0 +1,12 @@
+:host {
+  @media (min-width: 1400px) {
+    height: 34.625rem;
+  }
+  .todo-bar {
+    display: block;
+    height: 2.75rem;
+    width: .25rem;
+    margin-right: 1rem;
+    border-radius: .25rem;
+  }
+}
