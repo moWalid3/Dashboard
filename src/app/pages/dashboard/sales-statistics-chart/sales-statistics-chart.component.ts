@@ -11,7 +11,7 @@ import { FilterOptionsPopupComponent } from '../../../components/filter-options-
   styleUrl: './sales-statistics-chart.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'mr-3 border-round-lg shadow-1 surface-section overflow-hidden'
+    class: 'border-round-lg shadow-1 surface-section overflow-hidden'
   }
 })
 export class SalesStatisticsChartComponent implements OnInit {

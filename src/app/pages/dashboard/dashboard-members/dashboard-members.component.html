@@ -9,14 +9,15 @@
 <p-table
 [value]="membersService.currentMembers()"
 [(selection)]="selectedMembers"
-dataKey="author.name">
+dataKey="author.name"
+[tableStyle]="{'min-width': '47rem'}">
     <ng-template pTemplate="header">
       <tr>
-          <th class=" "><p-tableHeaderCheckbox /></th>
+          <th><p-tableHeaderCheckbox /></th>
           <th>Authors</th>
           <th>Company</th>
           <th>Progress</th>
-          <th class="text-center">Actions</th>
+          <th>Actions</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-member>

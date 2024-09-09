@@ -14,7 +14,7 @@ import { ProgressBarModule } from 'primeng/progressbar';
   styleUrl: './dashboard-members.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'p-4 ml-3 border-round-lg shadow-1 surface-section'
+    'class': 'p-4 border-round-lg shadow-1 surface-section'
   }
 })
 export class DashboardMembersComponent {

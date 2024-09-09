@@ -8,9 +8,6 @@ import { NgApexchartsModule  } from 'ng-apexcharts';
   templateUrl: './dashboard-reports-and-sales-chart.component.html',
   styleUrl: './dashboard-reports-and-sales-chart.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'block ml-3',
-  },
 })
 export class DashboardReportsAndSalesChartComponent implements OnInit {
   reportsChartOptions: any;
@@ -21,7 +18,6 @@ export class DashboardReportsAndSalesChartComponent implements OnInit {
       chart: {
         type: 'area',
         height: 144,
-        width: '100%',
         sparkline: {
           enabled: true,
         },

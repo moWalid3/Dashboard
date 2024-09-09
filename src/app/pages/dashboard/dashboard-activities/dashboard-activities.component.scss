@@ -1,6 +1,9 @@
 :host {
+  display: block;
   @media (min-width: 1400px) {
-    height: 36rem;
+    min-height: 36rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   ::ng-deep {
     .p-timeline-event-opposite {

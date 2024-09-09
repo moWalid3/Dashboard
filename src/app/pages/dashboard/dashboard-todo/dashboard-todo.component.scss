@@ -1,6 +1,8 @@
 :host {
+  display: block;
   @media (min-width: 1400px) {
-    height: 34.625rem;
+    min-height: 551px;
+    margin-right: 1rem;
   }
   .todo-bar {
     display: block;

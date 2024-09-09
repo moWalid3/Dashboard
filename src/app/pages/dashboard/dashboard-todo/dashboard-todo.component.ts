@@ -20,7 +20,7 @@ export type TagSeverity = "success" | "secondary" | "info" | "warning" | "danger
   styleUrl: './dashboard-todo.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'block p-4 mr-3 border-round-lg shadow-1 surface-section'
+    'class': 'p-4 border-round-lg shadow-1 surface-section'
   }
 })
 export class DashboardTodoComponent {

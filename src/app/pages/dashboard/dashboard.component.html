@@ -1,26 +1,9 @@
-<div class="grid grid-nogutter row-gap-4">
+<div class="dashboard-layout row-gap-4">
 
-  <div class="col-12 lg:col-4">
-    <app-sales-statistics-chart />
-  </div>
-
-  <div class="col-12 lg:col-4">
-    <app-dashboard-activities />
-  </div>
-
-  <div class="col-12 lg:col-4">
-    <app-dashboard-reports-and-sales-chart />
-  </div>
-
-  <div class="col-12 lg:col-4">
-    <app-dashboard-todo />
-  </div>
-
-  <div class="col-12 lg:col-8">
-    <app-dashboard-members />
-  </div>
-
-
+  @for (component of components; track $index) {
+    <div  [class]="component.class">
+      <ng-container *ngComponentOutlet="component.selector" />
+    </div>
+  }
 
 </div>
-

@@ -16,7 +16,7 @@ interface Activity {
   styleUrl: './dashboard-activities.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    'class': 'block p-4 mx-3 border-round-lg shadow-1 surface-section'
+    'class': 'p-4 pb-1 border-round-lg shadow-1 surface-section'
   }
 })
 export class DashboardActivitiesComponent {
