@@ -16,6 +16,13 @@ export const layoutRoutes: Routes = [
         }
       },
       {
+        path: 'widgets',
+        loadComponent: () => import('../pages/widgets/widgets.component').then(m => m.WidgetsComponent),
+        data: {
+          title: 'widgets'
+        }
+      },
+      {
         path: 'add-new-client',
         loadComponent: () =>
           import('../pages/add-new-client/add-new-client.component').then(

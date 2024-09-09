@@ -38,7 +38,7 @@ export class NavComponent  implements OnInit{
       {
         label: 'Widgets',
         icon: 'pi pi-star',
-        routerLink: '/test'
+        routerLink: '/widgets'
       },
       {
         label: 'Add New Client',
@@ -73,7 +73,7 @@ export class NavComponent  implements OnInit{
           {
             label: 'Overview',
             icon: 'pi pi-angle-double-right',
-            // routerLink: '/'
+            routerLink: '/test'
           },
           {
             label: 'Projects',
