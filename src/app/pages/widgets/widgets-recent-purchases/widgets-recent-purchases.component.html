@@ -16,20 +16,20 @@
   [rowsPerPageOptions]="[5, 10, 20]"
   [globalFilterFields]="['id', 'country.name', 'country.code', 'date.date','date.code' ,'company.name','company.service', 'total', 'status']"
 >
-<ng-template pTemplate="caption">
-  <div class="flex">
-    <p-iconField iconPosition="left" class="ml-auto">
-      <p-inputIcon>
-          <i class="pi pi-search"></i>
-      </p-inputIcon>
-      <input #filterInput
-          pInputText
-          type="text"
-          (input)="dataTable.filterGlobal(filterInput.value, 'contains')"
-          placeholder="Search keyword" />
-    </p-iconField>
-  </div>
-</ng-template>
+  <ng-template pTemplate="caption">
+    <div class="flex">
+      <p-iconField iconPosition="left" class="ml-auto">
+        <p-inputIcon>
+            <i class="pi pi-search"></i>
+        </p-inputIcon>
+        <input #filterInput
+            pInputText
+            type="text"
+            (input)="dataTable.filterGlobal(filterInput.value, 'contains')"
+            placeholder="Search keyword" />
+      </p-iconField>
+    </div>
+  </ng-template>
   <ng-template pTemplate="header">
     <tr>
       <th><p-tableHeaderCheckbox /></th>

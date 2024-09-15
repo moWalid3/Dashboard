@@ -73,12 +73,12 @@ export class NavComponent  implements OnInit{
           {
             label: 'Overview',
             icon: 'pi pi-angle-double-right',
-            routerLink: '/test'
+            routerLink: '/profile/overview'
           },
           {
             label: 'Projects',
             icon: 'pi pi-angle-double-right',
-            // routerLink: '/'
+            routerLink: '/profile/projects'
           },
           {
             label: 'Campaigns',
@@ -93,7 +93,7 @@ export class NavComponent  implements OnInit{
           {
             label: 'Connections',
             icon: 'pi pi-angle-double-right',
-            // routerLink: '/'
+            routerLink: '/test'
           },
         ],
       },

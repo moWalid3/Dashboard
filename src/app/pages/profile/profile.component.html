@@ -1,0 +1,21 @@
+<div class="p-5 pb-0 surface-section shadow-1 border-round-lg mb-5">
+
+  <app-user-header />
+
+  <ul class="list-none mb-0 mt-5 p-0 flex flex-wrap">
+    <li>
+      <a routerLink="/profile/overview" routerLinkActive="text-primary hover:text-primary border-bottom-1" class="block font-bold text-400 hover:text-500 transition-duration-100 no-underline p-3">Overview</a>
+    </li>
+    <li>
+      <a routerLink="/profile/projects" routerLinkActive="text-primary hover:text-primary border-bottom-1" class="block font-bold text-400 hover:text-500 transition-duration-100 no-underline p-3">Projects</a>
+    </li>
+    <li>
+      <a routerLink="/profile/campaigns" routerLinkActive="text-primary hover:text-primary border-bottom-1" class="block font-bold text-400 hover:text-500 transition-duration-100 no-underline p-3">Campaigns</a>
+    </li>
+    <li>
+      <a routerLink="/profile/documents" routerLinkActive="text-primary hover:text-primary border-bottom-1" class="block font-bold text-400 hover:text-500 transition-duration-100 no-underline p-3">Documents</a>
+    </li>
+  </ul>
+</div>
+
+<router-outlet />

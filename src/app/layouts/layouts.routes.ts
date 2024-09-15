@@ -59,6 +59,26 @@ export const layoutRoutes: Routes = [
         ]
       },
       {
+        path: 'profile',
+        loadComponent: () => import('../pages/profile/profile.component').then(m => m.ProfileComponent),
+        children: [
+          {
+            path: 'overview',
+            loadComponent: () => import('../pages/profile/profile-overview/profile-overview.component').then(m => m.ProfileOverviewComponent),
+            data: {
+              title: 'Overview'
+            }
+          },
+          {
+            path: 'projects',
+            loadComponent: () => import('../pages/profile/profile-projects/profile-projects.component').then(m => m.ProfileProjectsComponent),
+            data: {
+              title: 'Projects'
+            }
+          }
+        ]
+      },
+      {
         path: 'test',
         component: TestmeComponent,
       },

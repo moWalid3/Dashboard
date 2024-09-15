@@ -69,3 +69,9 @@ span.tooltip {
   color: var(--primary-color-text);
   margin-top: .25rem;
 }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
