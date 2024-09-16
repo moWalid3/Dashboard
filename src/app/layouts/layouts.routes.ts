@@ -75,7 +75,21 @@ export const layoutRoutes: Routes = [
             data: {
               title: 'Projects'
             }
-          }
+          },
+          {
+            path: 'campaigns',
+            loadComponent: () => import('../pages/profile/profile-campaigns/profile-campaigns.component').then(m => m.ProfileCampaignsComponent),
+            data: {
+              title: 'Campaigns'
+            }
+          },
+          {
+            path: 'documents',
+            loadComponent: () => import('../pages/profile/profile-documents/profile-documents.component').then(m => m.ProfileDocumentsComponent),
+            data: {
+              title: 'Documents'
+            }
+          },
         ]
       },
       {

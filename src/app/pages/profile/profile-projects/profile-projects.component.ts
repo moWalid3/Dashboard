@@ -76,5 +76,5 @@ export class ProfileProjectsComponent {
       default:
         return undefined;
     }
-  }
+  }; test = 'campaign'
 }

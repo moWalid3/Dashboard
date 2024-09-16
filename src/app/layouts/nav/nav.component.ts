@@ -83,17 +83,12 @@ export class NavComponent  implements OnInit{
           {
             label: 'Campaigns',
             icon: 'pi pi-angle-double-right',
-            // routerLink: '/'
+            routerLink: '/profile/campaigns'
           },
           {
             label: 'Documents',
             icon: 'pi pi-angle-double-right',
-            // routerLink: '/'
-          },
-          {
-            label: 'Connections',
-            icon: 'pi pi-angle-double-right',
-            routerLink: '/test'
+            routerLink: '/profile/documents'
           },
         ],
       },
