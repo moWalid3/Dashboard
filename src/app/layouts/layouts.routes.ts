@@ -93,6 +93,26 @@ export const layoutRoutes: Routes = [
         ]
       },
       {
+        path: 'account',
+        loadComponent: () => import('../pages/account/account.component').then(m => m.AccountComponent),
+        children: [
+          {
+            path: 'overview',
+            loadComponent: () => import('../pages/account/account-overview/account-overview.component').then(m => m.AccountOverviewComponent),
+            data: {
+              title: 'Account Overview'
+            }
+          },
+          {
+            path: 'settings',
+            loadComponent: () => import('../pages/account/account-settings/account-settings.component').then(m => m.AccountSettingsComponent),
+            data: {
+              title: 'Settings'
+            }
+          }
+        ]
+      },
+      {
         path: 'test',
         component: TestmeComponent,
       },
