@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { LayoutsComponent } from './layouts.component';
 import { DashboardComponent } from '../pages/dashboard/dashboard.component';
-import { TestmeComponent } from '../testme/testme.component';
 
 export const layoutRoutes: Routes = [
   {
@@ -36,6 +35,11 @@ export const layoutRoutes: Routes = [
         path: 'chat',
         children: [
           {
+            path: '',
+            redirectTo: 'private-chat',
+            pathMatch: 'full'
+          },
+          {
             path: 'private-chat',
             loadComponent : () => import('../pages/chats/private-chat/private-chat.component').then(m => m.PrivateChatComponent),
             data: {
@@ -62,6 +66,11 @@ export const layoutRoutes: Routes = [
         path: 'profile',
         loadComponent: () => import('../pages/profile/profile.component').then(m => m.ProfileComponent),
         children: [
+          {
+            path: '',
+            redirectTo: 'overview',
+            pathMatch: 'full'
+          },
           {
             path: 'overview',
             loadComponent: () => import('../pages/profile/profile-overview/profile-overview.component').then(m => m.ProfileOverviewComponent),
@@ -97,6 +106,11 @@ export const layoutRoutes: Routes = [
         loadComponent: () => import('../pages/account/account.component').then(m => m.AccountComponent),
         children: [
           {
+            path: '',
+            redirectTo: 'overview',
+            pathMatch: 'full'
+          },
+          {
             path: 'overview',
             loadComponent: () => import('../pages/account/account-overview/account-overview.component').then(m => m.AccountOverviewComponent),
             data: {
@@ -111,10 +125,6 @@ export const layoutRoutes: Routes = [
             }
           }
         ]
-      },
-      {
-        path: 'test',
-        component: TestmeComponent,
       },
     ],
   },

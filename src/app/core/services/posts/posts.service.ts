@@ -174,7 +174,7 @@ export class PostsService {
       },
       {
         id: Math.round(Math.random() * 10000),
-        imgUrl: 'users/male14.png',
+        imgUrl: 'users/male11.png',
         name: 'William Chen',
         time: '2024-09-25T09:15:00Z',
         content:

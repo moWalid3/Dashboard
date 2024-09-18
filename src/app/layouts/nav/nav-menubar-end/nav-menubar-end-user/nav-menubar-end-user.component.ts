@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { AccountService } from '../../../../core/services/account/account.service';
 
 @Component({
   selector: 'app-nav-menubar-end-user',
@@ -22,6 +23,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavMenubarEndUserComponent implements OnInit {
+  accountService = inject(AccountService);
   items!: MenuItem[];
 
   ngOnInit() {
@@ -51,6 +53,8 @@ export class NavMenubarEndUserComponent implements OnInit {
       },
       {
         label: 'Sign Out',
+        routerLink: '/auth/login',
+        command: () => localStorage.removeItem('moDash_auth_token'),
         icon: 'pi pi-sign-out'
       },
     ];

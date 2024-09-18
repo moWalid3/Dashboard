@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { FilterOptionsPopupComponent } from "../filter-options-popup/filter-options-popup.component";
 import { ProgressBarModule } from 'primeng/progressbar';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { AccountService } from '../../core/services/account/account.service';
 
 @Component({
   selector: 'app-user-header',
@@ -16,5 +17,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   }
 })
 export class UserHeaderComponent {
+  accountService = inject(AccountService);
   links = input.required<{ name: string, link: string }[]>();
 }

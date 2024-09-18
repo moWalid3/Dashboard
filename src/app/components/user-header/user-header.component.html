@@ -1,13 +1,13 @@
 <div class="flex flex-column md:flex-row justify-content-between align-items-center gap-3">
 
   <div class="image mr-1">
-    <img src="users/male14.png" alt="User Image" class="border-round-md">
+    <img [src]="accountService.avatar" alt="User Image" class="border-round-md">
   </div>
 
   <div class="flex-grow-1 p-0">
     <div class="flex justify-content-between mb-3 gap-3 flex-column-reverse md:flex-row">
       <div class="flex align-items-center gap-2 ">
-        <p class="m-0 font-bold text-xl text-900">Rami Adam</p>
+        <p class="m-0 font-bold text-xl text-900">{{ accountService.fullName }}</p>
         <i class="pi pi-verified text-primary"></i>
         <p-button label="Upgrade To Pro" styleClass="py-1 px-2 text-xs" size="small" severity="success" [outlined]="true"/>
       </div>
