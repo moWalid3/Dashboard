@@ -4,7 +4,7 @@ import { MenuModule } from 'primeng/menu';
 import { RippleModule } from 'primeng/ripple';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { AccountService } from '../../../../core/services/account/account.service';
 
 @Component({
@@ -23,6 +23,7 @@ import { AccountService } from '../../../../core/services/account/account.servic
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavMenubarEndUserComponent implements OnInit {
+  private router = inject(Router)
   accountService = inject(AccountService);
   items!: MenuItem[];
 
@@ -53,8 +54,10 @@ export class NavMenubarEndUserComponent implements OnInit {
       },
       {
         label: 'Sign Out',
-        routerLink: '/auth/login',
-        command: () => localStorage.removeItem('moDash_auth_token'),
+        command: () => {
+          this.router.navigate(['/auth/login']);
+          localStorage.removeItem('moDash_auth_token')
+        },
         icon: 'pi pi-sign-out'
       },
     ];

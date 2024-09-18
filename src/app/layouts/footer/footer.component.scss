@@ -5,9 +5,9 @@
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
   font-weight: bold;
-  color: var(--text-color-secondary);
+  color: var(--surface-400);
   div {
-    > span {
+    > a {
       cursor: pointer;
       transition: 100ms;
       &:hover {
