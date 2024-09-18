@@ -3,6 +3,7 @@ import { ButtonModule } from 'primeng/button';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-profile-documents',
@@ -11,7 +12,8 @@ import { InputTextModule } from 'primeng/inputtext';
     ButtonModule,
     IconFieldModule,
     InputTextModule,
-    InputIconModule
+    InputIconModule,
+    AnimateOnScrollModule
   ],
   templateUrl: './profile-documents.component.html',
   styleUrl: './profile-documents.component.scss',

@@ -9,6 +9,7 @@ import { IProject, IProjectStatus } from '../../../core/models/project.model';
 import { ProjectsService } from '../../../core/services/projects/projects.service';
 import { TagModule } from 'primeng/tag';
 import { TooltipModule } from 'primeng/tooltip';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-profile-projects',
@@ -24,6 +25,7 @@ import { TooltipModule } from 'primeng/tooltip';
     DatePipe,
     NgClass,
     TooltipModule,
+    AnimateOnScrollModule
   ],
   templateUrl: './profile-projects.component.html',
   styleUrl: './profile-projects.component.scss',

@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { CampaignsService } from '../../../core/services/campaigns/campaigns.service';
 import { FilterOptionsPopupComponent } from '../../../components/filter-options-popup/filter-options-popup.component';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-profile-campaigns',
@@ -16,6 +17,7 @@ import { FilterOptionsPopupComponent } from '../../../components/filter-options-
     TooltipModule,
     FilterOptionsPopupComponent,
     DecimalPipe,
+    AnimateOnScrollModule
   ],
   templateUrl: './profile-campaigns.component.html',
   styleUrl: './profile-campaigns.component.scss',

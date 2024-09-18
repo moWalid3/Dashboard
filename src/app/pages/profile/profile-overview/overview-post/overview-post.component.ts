@@ -14,7 +14,7 @@ import { InputTextModule } from 'primeng/inputtext';
   styleUrl: './overview-post.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'p-4 surface-section shadow-1 border-round',
+    class: 'p-4 surface-section shadow-1 border-round animation-duration-200',
   }
 })
 export class OverviewPostComponent {

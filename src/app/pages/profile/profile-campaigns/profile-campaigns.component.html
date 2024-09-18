@@ -5,7 +5,7 @@
 
 <div class="grid">
   @for (campaign of campaignsService.currentCampaigns(); track $index) {
-    <div class="col-12 md:col-6 lg:col-4" [title]="campaign.title">
+    <div pAnimateOnScroll enterClass="zoomin" leaveClass="fadeout" class="col-12 md:col-6 lg:col-4 animation-duration-200" [title]="campaign.title">
       <div class="px-4 py-5 surface-section shadow-1 border-round-lg m-1">
 
         <div class="flex justify-content-between gap-3 align-items-center mb-4">
